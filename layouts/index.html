@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}</title>
+  <meta name="title" content="{{ if .IsHome -}}{{ .Site.Title }} &middot; {{ $.Site.Params.description }}{{- else -}}{{ .Title }} | {{ .Site.Title }} &middot; {{ $.Site.Params.description }} {{- end }}">
+  <!-- Descriptions -->
+  <meta name="description" content="{{ .Site.Params.Description }}">
+  {{ with .Site.Params.keywords }}<meta name="keywords" content="{{.}}">{{ end }}
+  {{ with .Site.LanguageCode }}<meta http-equiv="content-language" content="{{ . }}" />{{ end }}
+  <!-- Open Graph / Facebook -->
+  {{ if not .Site.Params.OpenGraph.hide }}
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:title" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}">
+  <meta property="og:description" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.description }}{{ if eq $isHomePage false }} - {{ .Description }}{{ end }}">
+  {{ end }}
+    <!-- Twitter -->
+  {{ if not .Site.Params.Twitter.hide }}
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{ .Permalink }}">
+  <meta property="twitter:title" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}">
+  <meta property="twitter:description" content="{{ if eq $isHomePage false }} {{ .Description }}{{ end }} {{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.description }}">
+  {{ end }}
+  <!-- canonical link tag -->
+  <link rel="canonical" href="{{ .Permalink }}"/>
+  <!-- Me -->    
+  {{ with .Site.Author.name }}<meta name="author" content="{{ . }}">{{ end }}
+  <link href="{{ .Site.Author.twitter }}" rel="me">
+  <link href="{{ .Site.Author.github }}" rel="me">
+  <link href="{{ .Site.Author.linkedin }}" rel="me">
+  <!-- Icons -->
+  <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}img/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="{{ .Site.BaseURL }}img/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="{{ .Site.BaseURL }}img/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="shortcut icon" href="{{ .Site.BaseURL }}img/favicon.ico">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* space-mono-regular - latin */
+    @font-face {
+      font-family: 'Space Mono';
+      font-style: normal;
+      font-weight: 400;
+      src: local(''),
+          url('../fonts/space-mono-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('../fonts/space-mono-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    /* space-mono-italic - latin */
+    @font-face {
+      font-family: 'Space Mono';
+      font-style: italic;
+      font-weight: 400;
+      src: local(''),
+          url('../fonts/space-mono-v6-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('../fonts/space-mono-v6-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    /* space-mono-700 - latin */
+    @font-face {
+      font-family: 'Space Mono';
+      font-style: normal;
+      font-weight: 700;
+      src: local(''),
+          url('../fonts/space-mono-v6-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('../fonts/space-mono-v6-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    
+    body {
+      background-color: #121212;
+      color: #EFF0F2;
+      font-family:'Space Mono', monospace;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    @media screen and (min-width: 600px) {
+      body {
+        font-size: 18px;
+      }
+    }
+
+    main,
+    footer {
+      max-width: 65ch;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 6rem;
+      margin-bottom: 6rem;
+    }
+
+    h1 {
+      margin-bottom: 4rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    a {
+      color: #ffffff;
+    }
+
+    .SiteHead {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .SiteHead-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+  {{ partial "site-head.html" . }}
+  <main>
+    {{ .Content }}
+  </main>
+  {{ partial "site-foot.html" . }}
+</body>
+</html>

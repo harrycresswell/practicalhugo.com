@@ -1,0 +1,18 @@
+baseURL = "http://example.org/"
+languageCode = "en-gb"
+title = "Practical Hugo"
+
+[author]
+  name = "Harry Cresswell"
+  website = "https://harrycresswell.com/"
+  twitter = "https://twitter.com/harrycresswell"
+  github = "https://github.com/harrycresswell"
+  linkedin = "https://linkedin.com/in/harrycresswell/"
+
+[outputs]
+  home = [ "HTML", "RSS" ]
+
+[outputFormats]
+[outputFormats.RSS]
+  mediatype = "application/rss"
+  baseName = "feed"
