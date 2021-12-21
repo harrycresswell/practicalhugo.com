@@ -1,0 +1,218 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}</title>
+  <meta name="title" content="{{ if .IsHome -}}{{ .Site.Title }} &middot; {{ $.Site.Params.description }}{{- else -}}{{ .Title }} | {{ .Site.Title }} &middot; {{ $.Site.Params.description }} {{- end }}">
+  <!-- Descriptions -->
+  <meta name="description" content="{{ .Site.Params.Description }}">
+  {{ with .Site.Params.keywords }}<meta name="keywords" content="{{.}}">{{ end }}
+  {{ with .Site.LanguageCode }}<meta http-equiv="content-language" content="{{ . }}" />{{ end }}
+  <!-- Open Graph / Facebook -->
+  {{ if not .Site.Params.OpenGraph.hide }}
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:title" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}">
+  <meta property="og:description" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.description }}{{ if eq $isHomePage false }} - {{ .Description }}{{ end }}">
+  <meta property="og:image" content="{{ .Site.BaseURL }}{{ with .Site.Params.opengraph.image }}{{ . }}{{ else }}img/apple-touch-icon.png{{ end }}">
+  {{ end }}
+    <!-- Twitter -->
+  {{ if not .Site.Params.Twitter.hide }}
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:url" content="{{ .Permalink }}">
+  <meta property="twitter:title" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}">
+  <meta property="twitter:description" content="{{ if eq $isHomePage false }} {{ .Description }}{{ end }} {{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.description }}">
+  {{ with .Site.Params.twitter.handle }}
+  <meta property="twitter:site" content="{{ . }}">
+  <meta property="twitter:creator" content="{{ . }}">
+  {{ end }}
+  <meta property="twitter:image" content="{{ .Site.BaseURL }}{{ with .Site.Params.twitter.image }}{{ . }}{{ else }}img/apple-touch-icon.png{{ end }}">
+  {{ end }}
+  <!-- canonical link tag -->
+  <link rel="canonical" href="{{ .Permalink }}"/>
+  <!-- Me -->    
+  {{ with .Site.Author.name }}<meta name="author" content="{{ . }}">{{ end }}
+  <link href="{{ .Site.Author.twitter }}" rel="me">
+  <link href="{{ .Site.Author.github }}" rel="me">
+  <link href="{{ .Site.Author.linkedin }}" rel="me">
+  <!-- Icons -->
+  <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}img/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="{{ .Site.BaseURL }}img/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="{{ .Site.BaseURL }}img/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="shortcut icon" href="{{ .Site.BaseURL }}img/favicon.ico">
+  <style>
+    :root {
+      --darkest: #111;
+      --darker: #191919;
+      --dark: #262626;
+      --light: #EFF0F2;
+      --white: #fff;
+      --elevation-04: 0px 12px 20px 8px rgba(0, 0, 0, 0.37);
+    }
+    
+    * {
+      margin: 0;
+    }
+
+    *, ::before, ::after {
+      box-sizing: border-box;
+    }
+
+    /* space-mono-regular - latin */
+    @font-face {
+      font-family: 'Space Mono';
+      font-style: normal;
+      font-weight: 400;
+      src: local(''),
+          url('../fonts/space-mono-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('../fonts/space-mono-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    /* space-mono-italic - latin */
+    @font-face {
+      font-family: 'Space Mono';
+      font-style: italic;
+      font-weight: 400;
+      src: local(''),
+          url('../fonts/space-mono-v6-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('../fonts/space-mono-v6-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    /* space-mono-700 - latin */
+    @font-face {
+      font-family: 'Space Mono';
+      font-style: normal;
+      font-weight: 700;
+      src: local(''),
+          url('../fonts/space-mono-v6-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+          url('../fonts/space-mono-v6-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    }
+    
+    body {
+      background-color: var(--darkest);
+      color: var(--light);
+      font-family:'Space Mono', monospace;
+      padding: 24px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /*@media screen and (min-width: 600px) {
+      body {
+        font-size: 18px;
+      }
+    }*/
+
+    main {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 6rem;
+      margin-bottom: 6rem;
+      max-width: 740px;
+    }
+
+    h1 {
+      margin-bottom: 4rem;
+    }
+
+    p {
+      line-height: 1.8;
+      max-width: 70ch;
+      margin-top: 1rem;
+    }
+
+    a {
+      color: var(--white);
+    }
+
+    form {
+      margin: 3rem 0;
+    }
+
+    fieldset {
+      border: 0;
+      background-color: var(--darker);
+      box-shadow: var(--elevation-04);
+      padding: 2rem;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      background-color: var(--dark);
+      border: 0;
+      border-radius: 8px;
+      color: var(--white);
+      display: block;
+      font-family: inherit;
+      font-size: 1rem;
+      margin-top: .5rem;
+      padding: 13px 16px;
+      width: 100%;
+    }
+
+    footer {
+      display: flex;
+      justify-content: center;
+    }
+
+    button,
+    .Button {
+      background-color: var(--light);
+      border: 0;
+      border-radius: 8px;
+      color: var(--darkest);
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 13px 16px;
+      width: 100%;
+    }
+
+    button:hover,
+    button:focus {
+      background-color: var(--white);
+      transform: translateY(-2px)
+    }
+
+       /* Hide focus styles if they're not needed, for example, 
+    when an element receives focus via the mouse. */
+    :focus:not(:focus-visible) {
+      outline: 0;
+    }
+
+    /* Show focus styles on keyboard focus. */
+    :focus-visible {
+      outline: dotted 2px var(--white);
+      outline-offset: 3px;
+    }
+
+
+    .SiteHead {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .SiteHead-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+
+    /* See:
+      * https://piccalil.li/tutorial/improve-the-readability-of-the-content-on-your-website#heading-the-flow-utility
+    */
+    .flow > * + * {
+      margin-top: var(--flow-space, 1em);
+    }
+
+    .visually-hidden {
+      position: absolute !important;
+      top: -9999px !important;
+      left: -9999px !important;
+    }
+  </style>
+</head>
