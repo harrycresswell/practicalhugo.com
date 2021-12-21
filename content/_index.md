@@ -12,4 +12,4 @@ If you like to **keep it simple** then this course is for you.
 
 It will teach you how to **use Hugo and the Jamstack to build websites** that are fun to make, easy to maintain and cost effective to run.
 
-Launching **Spring 2022**. Be the first to get access.
+Launching **Spring 2022**. Get early access.
