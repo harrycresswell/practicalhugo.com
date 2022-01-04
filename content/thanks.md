@@ -10,7 +10,7 @@ It’s great to have you on board!
 
 Practical Hugo is currently in development, but you’ll be the first to know as soon as it launches.
 
-As a way of saying thank you for your early support, I’d like to offer you **free access to all the course material**,  
+As a way of saying thank you for your early support, I’d like to offer you **free access to all the course material**.
 
 In return, all I ask is for you to complete [a short survey about your experience with Hugo](https://harrycresswell.typeform.com/to/drSopGck).
 
