@@ -8,13 +8,13 @@ draft: false
 
 It’s great to have you on board!
 
-The Practical Hugo course is still in early development, but you’ll be the first to know as soon as it launches.
+Practical Hugo is currently in development, but you’ll be the first to know as soon as it launches.
 
- As a way of saying thank you for your early support, you’ll also get **free access to all the course material**.
+As a way of saying thanks for your early support, I’d like to offer you **free access to all the course material**,  
 
-In return, all I ask is for a few moments of your time. 
+In return, all I ask is for you to complete [a short survey about your experience with Hugo](https://harrycresswell.typeform.com/to/drSopGck).
 
-Please complete [a short survey about your experience with Hugo](https://harrycresswell.typeform.com/to/drSopGck). Your answers will help me tailor content to make the course as useful as possible.
+The answers you provide will help me to make this course as useful to you as possible.
 
 Thanks again for subscribing!
 
