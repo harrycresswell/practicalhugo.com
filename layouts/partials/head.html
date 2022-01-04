@@ -16,7 +16,7 @@
   <meta property="og:description" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Site.Params.description }}{{ if eq $isHomePage false }} - {{ .Description }}{{ end }}">
   <meta property="og:image" content="{{ .Site.BaseURL }}{{ with .Site.Params.opengraph.image }}{{ . }}{{ else }}img/apple-touch-icon.png{{ end }}">
   {{ end }}
-    <!-- Twitter -->
+  <!-- Twitter -->
   {{ if not .Site.Params.Twitter.hide }}
   <meta property="twitter:card" content="summary">
   <meta property="twitter:url" content="{{ .Permalink }}">
@@ -63,6 +63,7 @@
       font-family: 'Space Mono';
       font-style: normal;
       font-weight: 400;
+      font-display: swap;
       src: local(''),
           url('../fonts/space-mono-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
           url('../fonts/space-mono-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -72,6 +73,7 @@
       font-family: 'Space Mono';
       font-style: italic;
       font-weight: 400;
+      font-display: swap;
       src: local(''),
           url('../fonts/space-mono-v6-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
           url('../fonts/space-mono-v6-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -81,11 +83,17 @@
       font-family: 'Space Mono';
       font-style: normal;
       font-weight: 700;
+      font-display: swap;
       src: local(''),
           url('../fonts/space-mono-v6-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
           url('../fonts/space-mono-v6-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
     }
-    
+
+    html,
+    body {
+      min-height: 100%;
+    }
+
     body {
       background-color: var(--darkest);
       color: var(--light);
@@ -95,11 +103,11 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-    /*@media screen and (min-width: 600px) {
+    @media screen and (min-width: 600px) {
       body {
         font-size: 18px;
       }
-    }*/
+    }
 
     main {
       margin-left: auto;
@@ -123,11 +131,12 @@
     p {
       line-height: 1.8;
       max-width: 70ch;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
     }
 
     a {
       color: var(--white);
+      text-underline-offset: 2px;
     }
 
     form {

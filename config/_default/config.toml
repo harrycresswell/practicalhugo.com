@@ -16,3 +16,6 @@ title = "Practical Hugo"
 [outputFormats.RSS]
   mediatype = "application/rss"
   baseName = "feed"
+
+[permalinks]
+  page = "/:slug/"
