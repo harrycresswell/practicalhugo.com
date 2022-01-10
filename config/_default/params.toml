@@ -3,6 +3,6 @@ keywords = "Hugo course, Go Hugo course, Hugo and Jamastack course, resilient we
 description = "Learn how to build fast, resilient websites with Hugo & the Jamstack."
 [twitter]
   handle = "@practicalhugo"
-  image = "img/card-image.png"
+  image = "img/practical-hugo-card.png"
 [opengraph]
-  image = "img/card-image.png"
+  image = "img/practical-hugo-card.png"
