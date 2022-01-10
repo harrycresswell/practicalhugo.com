@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  {{ partial "head.html" . }}
-  <body>
-    {{ partial "site-head.html" . }}
-    <main>
-      {{ .Content }}
-      {{ partial "signup-form.html" . }}
-      <p>PS – I’m writing this course in public and sharing my progress via <a href="https://harrycresswell.com/updates/">daily updates</a>.</p>
-    </main>
-    {{ partial "site-foot.html" . }}
-  </body>
-</html>
+{{ define "main" }}
+  {{ partial "hero.html" . }}
+  {{ .Content }}
+  {{ partial "signup-form.html" . }}
+  <p>PS – I’m writing this course in public and sharing my progress via <a href="https://harrycresswell.com/updates/">daily updates</a>.</p>
+{{ end }}

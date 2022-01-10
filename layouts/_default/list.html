@@ -1,0 +1,15 @@
+{{ define "main" }}
+  {{ partial "hero.html" . }}
+  <ul>
+  {{ range .Pages }}
+    <li>
+        <h2>
+          <a href="{{ .Permalink }}">{{ .Date.Format "2006-01-02" }} – {{ .Title }}</a>
+        </h2>
+        <div class="flow">
+          {{ .Content }}
+        </div>
+    </li>
+  {{ end }}
+  </ul>
+{{ end }}

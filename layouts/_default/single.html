@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  {{ partial "head.html" . }}
-  <body>
-    {{ partial "site-head.html" . }}
-    <main>
-      <h1>{{ .Title }}</h1>
-      {{ .Content }}
-    </main>
-    {{ partial "site-foot.html" . }}
-  </body>
-</html>
+{{ define "main" }}
+  {{ partial "hero.html" . }}
+  {{ .Content }}
+{{ end }}

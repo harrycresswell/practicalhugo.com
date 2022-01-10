@@ -19,3 +19,4 @@ title = "Practical Hugo"
 
 [permalinks]
   page = "/:slug/"
+  changelog = "/:section/:slug/"
