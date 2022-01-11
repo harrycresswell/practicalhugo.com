@@ -1,0 +1,4 @@
+[[main]]
+  name = "Changelog"
+  url = "/changelog/"
+  weight = 1

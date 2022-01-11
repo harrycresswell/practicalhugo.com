@@ -1,0 +1,31 @@
+{{ define "main" }}
+  {{ partial "hero.html" . }}
+  <ul class="ChangeLog">
+  {{ range .Pages }}
+    <li class="ChangeLog-item">
+      <time class="ChangeLog-date">{{ .Date.Format "2006-01-02" }}</time>
+      <div class="flow">
+      {{ with .Params.badges }}
+        {{ range . }}
+          <span class="ChangeLog-badge">
+            {{ . }}
+          </span>
+        {{ end }}
+      {{ end }}
+        <h2>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h2>
+        <div>
+          {{ .Content }}
+        </div>
+      </div>
+    </li>
+  {{ end }}
+  </ul>
+  {{ $calloutText := .Params.callout_text }}
+  {{ if eq .Params.callout true  }}
+  <section class="Callout">
+    {{ $calloutText | markdownify }}
+  </section>
+  {{ end }}
+{{ end }}
