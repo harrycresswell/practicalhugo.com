@@ -243,6 +243,11 @@
     .ChangeLog-item {
       display: grid;
       gap: 1rem;
+      padding: 3rem 0;
+    }
+
+    .ChangeLog-item:not(:first-of-type) {
+      border-top: 2px dotted;
     }
 
     @media screen and (min-width: 768px) {
@@ -259,7 +264,7 @@
 
     .Callout {
       background-color: var(--darker);
-      margin-top: 14rem;
+      margin-top: 8rem;
       padding: 1rem;
       text-align: center;
     }
