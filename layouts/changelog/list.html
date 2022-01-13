@@ -1,8 +1,8 @@
 {{ define "main" }}
   {{ partial "hero.html" . }}
-  <ul class="ChangeLog">
+  <section class="ChangeLog">
   {{ range .Pages }}
-    <li class="ChangeLog-item">
+    <article class="ChangeLog-item">
       <time class="ChangeLog-date">{{ .Date.Format "2006-01-02" }}</time>
       <div class="flow">
       {{ with .Params.badges }}
@@ -19,9 +19,9 @@
           {{ .Content }}
         </div>
       </div>
-    </li>
+    </article>
   {{ end }}
-  </ul>
+  </section>
   {{ $calloutText := .Params.callout_text }}
   {{ if eq .Params.callout true  }}
   <section class="Callout">
