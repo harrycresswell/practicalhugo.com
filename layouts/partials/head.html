@@ -169,13 +169,22 @@
     }
 
     footer {
-      display: flex;
-      justify-content: center;
       position:absolute;
       bottom:0;
       width: 100%;
       padding: 1rem 0;
+      display: flex;
+      gap: .5rem;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
+    }
+
+    @media screen and (min-width: 768px) {
+      footer {
+        flex-direction: row;
+        gap: 2rem;
+      }
     }
 
     footer p {
@@ -233,6 +242,7 @@
 
     .Nav-list {
       list-style: none;
+      padding: 0;
     }
 
     .ChangeLog {
