@@ -18,7 +18,7 @@
   {{ end }}
   <!-- Twitter -->
   {{ if not .Site.Params.Twitter.hide }}
-  <meta property="twitter:card" content="summary">
+  <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="{{ .Permalink }}">
   <meta property="twitter:title" content="{{ $isHomePage := eq .Title .Site.Title }}{{ .Title }}{{ if eq $isHomePage false }} | {{ .Site.Title }}{{ end }}">
   <meta property="twitter:description" content="{{ with .Params.description_seo }}{{ . }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
