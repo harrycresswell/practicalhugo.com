@@ -51,12 +51,12 @@
     </noscript>
   {{ else }}
     <!-- Pipe critical Sass to CSS, add postCSS autoprefixer, minify -->
-    {{ $critical := resources.Get "scss/critical.scss" | toCSS | postCSS (dict "use" "autoprefixer") | minify }}
+    {{ $critical := resources.Get "scss/critical.scss" | toCSS | minify }}
     <style>{{ $critical.Content | safeCSS }}</style>
     <!-- Set target path -->
     {{ $main := (dict "targetPath" "css/main.css" ) }}
       <!-- Pipe Sass to CSS, include options, add postCSS autoprefixer, minify and hash -->
-    {{ $styles := resources.Get "scss/main.scss" | toCSS $main | postCSS (dict "use" "autoprefixer") | minify | fingerprint }}
+    {{ $styles := resources.Get "scss/main.scss" | toCSS $main | minify | fingerprint }}
     <!-- Load main.css and authenticate hashed file -->
     <!-- Load non-critical styles using preload, onload switch rel from preload to stylesheet -->
     <link rel="preload" href="{{ $styles.Permalink }}" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="{{ $styles.Data.Integrity }}"/>
