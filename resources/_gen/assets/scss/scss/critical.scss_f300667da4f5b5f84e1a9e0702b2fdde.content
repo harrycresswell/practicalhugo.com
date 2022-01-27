@@ -260,8 +260,8 @@ ul {
   display: grid;
   gap: var(--size-40);
   padding: var(--size-80) 0; }
-  .ChangeLog-item a {
-    text-decoration: none; }
+  .ChangeLog-item h2 {
+    padding: var(--size-80) 0; }
 
 .ChangeLog-item:not(:first-of-type) {
   border-top: 2px dotted; }

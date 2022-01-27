@@ -3,9 +3,10 @@
  gap: var(--size-40);
  padding: var(--size-80) 0;
 
- a {
-  text-decoration: none;
+ h2 {
+  padding: var(--size-80) 0;
  }
+
 }
 
 .ChangeLog-item:not(:first-of-type) {

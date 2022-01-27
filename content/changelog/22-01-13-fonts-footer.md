@@ -7,7 +7,7 @@ badges:
   - Fixed
 ---
 
-**Bug fixes & improvements**:
+### Bug fixes & improvements
 
 - Footer now stacks on smaller devices
 - Added missing base URL to font paths 
