@@ -1,7 +1,7 @@
 {{ define "main" }}
 <article class="ChangeLog-item">
   <time class="ChangeLog-date">{{ .Date.Format "2006-01-02" }}</time>
-  <div class="flow">
+  <div>
     {{ with .Params.badges }}
       {{ range . }}
         <span class="ChangeLog-badge">

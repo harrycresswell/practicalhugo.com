@@ -1,6 +1,7 @@
 .Callout {
- background-color: var(--darker);
- margin-top: 8rem;
- padding: 1rem;
+ background-color: var(--gray-800);
+ margin-top: var(--size-100);
+ margin-bottom: var(--size-100);
+ padding: var(--size-40);
  text-align: center;
 }

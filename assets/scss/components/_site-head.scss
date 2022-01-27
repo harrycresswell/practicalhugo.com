@@ -2,10 +2,11 @@
  display: flex;
  justify-content: space-between;
  align-items: center;
+ padding: var(--size-60);
 }
 
 .SiteHead-title {
- font-weight: bold;
- font-size: 1.2rem;
+ font-weight: var(--font-weight-bold);
+ font-size: var(--size-50);
  text-decoration: none;
 }

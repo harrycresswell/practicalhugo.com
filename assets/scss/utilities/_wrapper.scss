@@ -1,9 +1,7 @@
 .wrapper {
+ max-width: 768px;
  margin-left: auto;
  margin-right: auto;
- margin-top: 6rem;
- margin-bottom: 6rem;
- max-width: 740px;
- padding-bottom: 8rem;
- /* Height of the footer */
+ padding-left: var(--size-60);
+ padding-right: var(--size-60);
 }

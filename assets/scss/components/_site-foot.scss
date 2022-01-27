@@ -1,8 +1,8 @@
 .SiteFoot {
  width: 100%;
- padding: 1rem 0;
+ padding: var(--size-80);
  display: flex;
- gap: .5rem;
+ gap: var(--size-20);
  flex-direction: column;
  justify-content: center;
  align-items: center;
@@ -11,7 +11,7 @@
 @media screen and (min-width: 768px) {
  .SiteFoot {
   flex-direction: row;
-  gap: 2rem;
+  gap: var(--size-70);
  }
 }
 

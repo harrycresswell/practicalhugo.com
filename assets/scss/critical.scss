@@ -1,17 +1,28 @@
-@import 'abstracts/fonts';
+// Config
+@import 'abstracts/font';
 @import 'abstracts/theme';
+@import 'abstracts/size';
+@import 'abstracts/type';
+@import 'abstracts/break';
 
+// Global styles
 @import 'base/reset';
+@import 'base/type';
 @import 'base/focus';
-@import 'base/typography';
+@import 'base/link';
+@import 'base/theme';
 @import 'base/form';
 @import 'base/list';
 
+// Components
 @import 'components/site-head';
 @import 'components/nav';
 @import 'components/button';
 @import 'components/changelog';
+@import 'components/site-foot';
+@import 'components/callout';
 
+// Utilities
 @import 'utilities/align-items';
 @import 'utilities/wrapper';
 @import 'utilities/flow';

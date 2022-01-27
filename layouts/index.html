@@ -1,6 +1,7 @@
 {{ define "main" }}
   {{ partial "hero.html" . }}
-  {{ .Content }}
+  <section class="flow">
+    {{ .Content }}
+  </section>
   {{ partial "signup-form.html" . }}
-  <p>PS – I’m writing this course in public and sharing my progress via <a href="https://harrycresswell.com/updates/">daily updates</a>.</p>
 {{ end }}
