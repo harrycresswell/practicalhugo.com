@@ -1,0 +1,38 @@
+body {
+  background-color: var(--darkest);
+  color: var(--light);
+  font-family: 'Space Mono', monospace;
+  padding: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+h1 {
+  margin-bottom: 4rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+p {
+  line-height: 1.8;
+  max-width: 70ch;
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--white);
+  text-underline-offset: 2px;
+}

@@ -1,0 +1,11 @@
+ /* Hide focus styles if they're not needed, for example, 
+    when an element receives focus via the mouse. */
+ :focus:not(:focus-visible) {
+  outline: 0;
+ }
+
+ /* Show focus styles on keyboard focus. */
+ :focus-visible {
+  outline: dotted 2px var(--white);
+  outline-offset: 3px;
+ }

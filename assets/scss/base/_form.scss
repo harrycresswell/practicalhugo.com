@@ -1,0 +1,27 @@
+form {
+ margin: 3rem 0;
+}
+
+fieldset {
+ border: 0;
+ background-color: var(--darker);
+ box-shadow: var(--elevation-04);
+ padding: 2rem;
+}
+
+label {
+ font-weight: bold;
+}
+
+input {
+ background-color: var(--dark);
+ border: 0;
+ border-radius: 8px;
+ color: var(--white);
+ display: block;
+ font-family: inherit;
+ font-size: 1rem;
+ margin-top: .5rem;
+ padding: 13px 16px;
+ width: 100%;
+}
