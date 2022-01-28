@@ -12,6 +12,6 @@ badges:
   - Security
 ---
 
-## New feature
+### New feature
 
-## Bug fixes & improvements
+### Bug fixes & improvements

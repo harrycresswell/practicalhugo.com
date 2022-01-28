@@ -51,7 +51,7 @@
     </noscript>
   {{ else }}
     <!-- Pipe critical Sass to CSS, add postCSS autoprefixer, minify -->
-    {{ $critical := resources.Get "scss/critical.scss" | toCSS | minify }}
+    {{ $critical := resources.Get "scss/critical.scss" | resources.ExecuteAsTemplate "critical.scss" . | toCSS | minify }}
     <style>{{ $critical.Content | safeCSS }}</style>
     <!-- Set target path -->
     {{ $main := (dict "targetPath" "css/main.css" ) }}
