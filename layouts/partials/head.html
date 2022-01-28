@@ -38,7 +38,7 @@
   <!-- Styles -->
   {{ if .Site.IsServer }}
     <!-- Pipe critical Sass to CSS, include options, enable sourcemaps, minify output -->
-    {{ $critical := resources.Get "scss/critical.scss" | toCSS }}
+    {{ $critical := resources.Get "scss/critical.scss" | resources.ExecuteAsTemplate "critical.scss" . | toCSS }}
     <!-- Shove critical css in the head -->
     <style>{{ $critical.Content | safeCSS }}</style>
     <!-- Pipe main Sass to CSS, include options, enable sourcemaps -->
