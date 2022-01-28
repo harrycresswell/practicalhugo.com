@@ -1,11 +1,16 @@
 <footer class="SiteFoot" role="banner">
-  <p><a href="https://twitter.com/practicalhugo">@practicalhugo</a> by <a href="https://harrycresswell.com/">@harrycresswell</a></p>
   <nav class="Nav">
     <ul class="Nav-list">
       {{ $currentPage := . }}
       {{ range .Site.Menus.main }}
-      <li>
-        <a class="{{ if eq $currentPage.RelPermalink .URL }}is-active{{end}}" href="{{.URL}}">
+      <li class="Nav-listItem">
+        <a 
+          class="Nav-listItemLink {{ if eq $currentPage.RelPermalink .URL }}is-active{{end}}" 
+          href="{{.URL}}"
+          {{- if eq .Params.external true -}}
+            target="_blank" rel="noopener noreferrer"
+          {{- end -}}
+          >
           {{ .Name }}
         </a>
       </li>

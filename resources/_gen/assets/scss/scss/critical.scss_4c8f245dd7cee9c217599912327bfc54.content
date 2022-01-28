@@ -235,8 +235,13 @@ ul {
   text-decoration: none; }
 
 .Nav-list {
-  list-style: none;
-  padding: 0; }
+  list-style: none; }
+
+.Nav-listItem {
+  margin: var(--size-60) 0; }
+
+.Nav-listItemLink {
+  padding: var(--size-10); }
 
 .Button {
   background-color: var(--gray-200);
@@ -282,7 +287,8 @@ ul {
   gap: var(--size-20);
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  text-align: center; }
 
 @media screen and (min-width: 768px) {
   .SiteFoot {

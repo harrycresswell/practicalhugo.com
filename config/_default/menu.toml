@@ -1,4 +1,16 @@
 [[main]]
+  name = "@practicalhugo"
+  url = "https://twitter.com/practicalhugo/"
+  weight = 1
+  [main.params]
+    external = true
+[[main]]
+  name = "@harrycresswell"
+  url = "https://harrycresswell.com/"
+  weight = 2
+  [main.params]
+    external = true
+[[main]]
   name = "Changelog"
   url = "/changelog/"
-  weight = 1
+  weight = 3

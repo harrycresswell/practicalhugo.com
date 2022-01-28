@@ -1,4 +1,11 @@
 .Nav-list {
  list-style: none;
- padding: 0;
+}
+
+.Nav-listItem {
+ margin: var(--size-60) 0;
+}
+
+.Nav-listItemLink {
+ padding: var(--size-10);
 }
