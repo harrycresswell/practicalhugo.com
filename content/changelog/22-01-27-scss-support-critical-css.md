@@ -2,7 +2,7 @@
 title: "SCSS Support and Critical CSS"
 date: 2022-01-27T20:01:40Z
 draft: false
-slug: ""
+slug: "scss-support-critical-css"
 badges: 
   - Added
 ---
