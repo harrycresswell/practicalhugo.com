@@ -30,6 +30,10 @@ h1 {
   @include breakpoint(md) {
     font-size: var(--size-90);
   }
+
+  @include breakpoint(lg) {
+    font-size: var(--size-100);
+  }
 }
 
 

@@ -7,7 +7,6 @@
  --elevation-04: 0px 12px 20px 8px rgba(0, 0, 0, 0.37);
 }
 
-// ::selection {
-//  color: var(--color-link);
-//  background-color: var(--color-selection);
-// }
+::selection {
+ background-color: var(--gray-800);
+}

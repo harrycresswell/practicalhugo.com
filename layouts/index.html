@@ -1,7 +1,10 @@
 {{ define "main" }}
   {{ partial "hero.html" . }}
-  <section class="flow">
-    {{ .Content }}
+  <section class="grid gg110 lg:gtc-1-1">
+    <div class="flow">
+      {{ .Content }}
+    </div>
+    {{ partial "signup-form.html" . }}
   </section>
-  {{ partial "signup-form.html" . }}
+  
 {{ end }}

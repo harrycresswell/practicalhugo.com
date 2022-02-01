@@ -2,8 +2,8 @@
  display: grid;
 }
 
-.gg100 {
- gap: var(--size-100);
+.gg110 {
+ gap: var(--size-110);
 }
 
 .gg80 {
@@ -11,6 +11,10 @@
 }
 
 @include breakpoint(lg) {
+ .lg\:gtc-1-1 {
+  grid-template-columns: 1fr 1fr;
+ }
+
  .lg\:gtc-1-2 {
   grid-template-columns: 1fr 2fr;
  }

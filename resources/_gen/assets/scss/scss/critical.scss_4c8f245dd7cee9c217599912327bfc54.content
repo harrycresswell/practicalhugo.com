@@ -33,6 +33,9 @@
   --white: #fff;
   --elevation-04: 0px 12px 20px 8px rgba(0, 0, 0, 0.37); }
 
+::selection {
+  background-color: var(--gray-800); }
+
 :root {
   --vr: calc(1rem);
   --size-10: calc(var(--vr) * 0.25);
@@ -44,9 +47,10 @@
   --size-70: calc(var(--vr) *2);
   --size-80: calc(var(--vr) *3);
   --size-90: calc(var(--vr) *4);
-  --size-100: calc(var(--vr) *6);
-  --size-110: calc(var(--vr) *8);
-  --size-120: calc(var(--vr) *11); }
+  --size-100: calc(var(--vr) *4.5);
+  --size-110: calc(var(--vr) *6);
+  --size-120: calc(var(--vr) *8);
+  --size-130: calc(var(--vr) *11); }
 
 :root {
   --font-default: 'Space Mono', "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
@@ -169,6 +173,9 @@ h1 {
   @media (min-width: 48em) {
     h1 {
       font-size: var(--size-90); } }
+  @media (min-width: 64em) {
+    h1 {
+      font-size: var(--size-100); } }
 h2 {
   font-size: var(--size-70);
   max-width: var(--width-compact); }
@@ -208,9 +215,6 @@ a {
 body {
   background-color: var(--gray-900);
   color: var(--gray-200); }
-
-form {
-  margin: var(--size-100) 0; }
 
 fieldset {
   border: 0;
@@ -279,14 +283,8 @@ ul {
   background-color: var(--white);
   transform: translateY(-2px); }
 
-.ChangeLog-date {
-  margin-right: var(--size-40); }
-
-.ChangeLog-item:not(:first-of-type) {
-  border-top: 2px dotted; }
-
 .SiteFoot {
-  margin-top: var(--size-120);
+  margin-top: var(--size-130);
   margin-left: var(--size-60);
   margin-right: var(--size-60);
   display: flex;
@@ -304,7 +302,7 @@ ul {
 .Callout {
   background-color: var(--gray-800);
   margin-top: var(--size-100);
-  margin-bottom: var(--size-100);
+  margin-bottom: var(--size-110);
   padding: var(--size-40);
   text-align: center; }
 
@@ -362,13 +360,15 @@ ul {
 .grid {
   display: grid; }
 
-.gg100 {
-  gap: var(--size-100); }
+.gg110 {
+  gap: var(--size-110); }
 
 .gg80 {
   gap: var(--size-80); }
 
 @media (min-width: 64em) {
+  .lg\:gtc-1-1 {
+    grid-template-columns: 1fr 1fr; }
   .lg\:gtc-1-2 {
     grid-template-columns: 1fr 2fr; } }
 
@@ -386,3 +386,6 @@ ul {
 
 .bt\:not:not(:first-of-type) {
   border-top: dotted 2px; }
+
+.pb110 {
+  padding-bottom: var(--size-110); }
