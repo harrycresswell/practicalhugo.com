@@ -1,0 +1,10 @@
+.Badge {
+ background-color: var(--gray-700);
+ font-size: var(--size-40);
+ padding: var(--size-10) var(--size-20);
+ text-align: center;
+}
+
+.Badge:not(:first-of-type) {
+ margin-left: var(--size-20);
+}

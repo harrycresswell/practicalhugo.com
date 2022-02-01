@@ -275,11 +275,6 @@ ul {
   .ChangeLog-item {
     grid-template-columns: 1fr 4fr; } }
 
-.ChangeLog-badge {
-  background-color: var(--gray-700);
-  font-size: var(--size-40);
-  padding: var(--size-10) var(--size-20); }
-
 .SiteFoot {
   width: 100%;
   padding: var(--size-80);
@@ -304,6 +299,15 @@ ul {
   margin-bottom: var(--size-100);
   padding: var(--size-40);
   text-align: center; }
+
+.Badge {
+  background-color: var(--gray-700);
+  font-size: var(--size-40);
+  padding: var(--size-10) var(--size-20);
+  text-align: center; }
+
+.Badge:not(:first-of-type) {
+  margin-left: var(--size-20); }
 
 .visually-hidden {
   border: 0;

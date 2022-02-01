@@ -2,13 +2,11 @@
 <article class="ChangeLog-item">
   <time class="ChangeLog-date">{{ .Date.Format "2006-01-02" }}</time>
   <div>
-    {{ with .Params.badges }}
-      {{ range . }}
-        <span class="ChangeLog-badge">
-          {{ . }}
-        </span>
-      {{ end }}
-    {{ end }}
+    {{- with .Params.badges -}}
+      {{- range . -}}
+        <span class="Badge">{{ . }}</span>
+      {{- end -}}
+    {{- end -}}
     <h1>
       {{ .Title }}
     </h1>
