@@ -1,18 +1,18 @@
 {{ define "main" }}
-<article class="ChangeLog-item">
-  <time class="ChangeLog-date">{{ .Date.Format "2006-01-02" }}</time>
-  <div>
-    {{- with .Params.badges -}}
-      {{- range . -}}
-        <span class="Badge">{{ . }}</span>
+<article class="">
+  <h1>{{ .Title }}</h1>
+  <section class="grid gg100 lg:gtc-1-2">
+    <div>
+      <time class="mr40">{{ .Date.Format "2006-01-02" }}</time>
+      {{- with .Params.badges -}}
+        {{- range . -}}
+          <span class="Badge">{{ . }}</span>
+        {{- end -}}
       {{- end -}}
-    {{- end -}}
-    <h1>
-      {{ .Title }}
-    </h1>
+    </div>
     <div class="flow">
       {{ .Content }}
     </div>
-  </div>
+  </section>
 </article>
 {{ end }}

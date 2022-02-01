@@ -1,22 +1,26 @@
 {{ define "main" }}
   {{ partial "hero.html" . }}
-  <section class="ChangeLog">
+  <section class="grid gg100">
   {{ range .Pages }}
-    <article class="ChangeLog-item">
-      <time class="ChangeLog-date">{{ .Date.Format "2006-01-02" }}</time>
-      <div>
-        {{- with .Params.badges -}}
-          {{- range . -}}
-            <span class="Badge">{{ . }}</span>
+    <article class="bb:not" style="padding-bottom: 96px; ">
+      <section class="grid gg80 lg:gtc-1-2">
+        <div>
+          <time class="mr40">{{ .Date.Format "2006-01-02" }}</time>
+          {{- with .Params.badges -}}
+            {{- range . -}}
+              <span class="Badge">{{ . }}</span>
+            {{- end -}}
           {{- end -}}
-        {{- end -}}
-        <h2>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </h2>
-        <div class="flow">
-          {{ .Content }}
         </div>
-      </div>
+        <div class="grid gg80">
+          <h2>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h2>
+          <div class="flow">
+            {{ .Content }}
+          </div>
+        </div>
+      </section> 
     </article>
   {{ end }}
   </section>

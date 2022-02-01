@@ -18,19 +18,36 @@ h2,
 h3,
 h4 {
   line-height: var(--line-height-compact);
-  max-width: var(--width-compact);
   text-transform: uppercase;
 }
 
 h1 {
   font-size: var(--size-80);
-  margin-top: var(--size-110);
-  margin-bottom: var(--size-110);
+  margin-top: var(--size-120);
+  margin-bottom: var(--size-120);
+  max-width: var(--width-compact);
+
+  @include breakpoint(md) {
+    font-size: var(--size-90);
+  }
 }
 
-@include breakpoint(md) {
-  h1 {
-    font-size: var(--size-90);
+
+h2 {
+  font-size: var(--size-70);
+  max-width: var(--width-compact);
+
+  @include breakpoint(md) {
+    font-size: var(--size-80);
+  }
+
+}
+
+h3 {
+  font-size: var(--size-60);
+
+  @include breakpoint(md) {
+    font-size: var(--size-70);
   }
 }
 
@@ -38,4 +55,8 @@ p,
 li,
 blockquote {
   max-width: var(--width-longform);
+}
+
+code {
+  background-color: var(--gray-800);
 }

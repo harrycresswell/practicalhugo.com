@@ -55,7 +55,7 @@
   --font-weight-bold: 700;
   --line-height-compact: 1.1;
   --line-height-loose: 1.6;
-  --width-compact: 20ch;
+  --width-compact: 28ch;
   --width-longform: 65ch; }
 
 /*------------------------------------*\
@@ -159,22 +159,34 @@ h2,
 h3,
 h4 {
   line-height: var(--line-height-compact);
-  max-width: var(--width-compact);
   text-transform: uppercase; }
 
 h1 {
   font-size: var(--size-80);
-  margin-top: var(--size-110);
-  margin-bottom: var(--size-110); }
-
-@media (min-width: 48em) {
-  h1 {
-    font-size: var(--size-90); } }
-
+  margin-top: var(--size-120);
+  margin-bottom: var(--size-120);
+  max-width: var(--width-compact); }
+  @media (min-width: 48em) {
+    h1 {
+      font-size: var(--size-90); } }
+h2 {
+  font-size: var(--size-70);
+  max-width: var(--width-compact); }
+  @media (min-width: 48em) {
+    h2 {
+      font-size: var(--size-80); } }
+h3 {
+  font-size: var(--size-60); }
+  @media (min-width: 48em) {
+    h3 {
+      font-size: var(--size-70); } }
 p,
 li,
 blockquote {
   max-width: var(--width-longform); }
+
+code {
+  background-color: var(--gray-800); }
 
 /* Hide focus styles if they're not needed, for example, 
     when an element receives focus via the mouse. */
@@ -261,23 +273,16 @@ ul {
   background-color: var(--white);
   transform: translateY(-2px); }
 
-.ChangeLog-item {
-  display: grid;
-  gap: var(--size-40);
-  padding: var(--size-80) 0; }
-  .ChangeLog-item h2 {
-    padding: var(--size-80) 0; }
+.ChangeLog-date {
+  margin-right: var(--size-40); }
 
 .ChangeLog-item:not(:first-of-type) {
   border-top: 2px dotted; }
 
-@media (min-width: 48em) {
-  .ChangeLog-item {
-    grid-template-columns: 1fr 4fr; } }
-
 .SiteFoot {
   width: 100%;
   padding: var(--size-80);
+  margin-top: var(--size-100);
   display: flex;
   gap: var(--size-20);
   flex-direction: column;
@@ -333,7 +338,7 @@ ul {
   align-items: center; }
 
 .wrapper {
-  max-width: 768px;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
   padding-left: var(--size-60);
@@ -349,3 +354,31 @@ ul {
 
 .flex {
   display: flex; }
+
+.grid {
+  display: grid; }
+
+.gg100 {
+  gap: var(--size-100); }
+
+.gg80 {
+  gap: var(--size-80); }
+
+@media (min-width: 64em) {
+  .lg\:gtc-1-2 {
+    grid-template-columns: 1fr 2fr; } }
+
+.mr40 {
+  margin-right: var(--size-40); }
+
+.bb {
+  border-bottom: dotted 2px; }
+
+.bt {
+  border-top: dotted 2px; }
+
+.bb\:not:not(:last-of-type) {
+  border-bottom: dotted 2px; }
+
+.bt\:not:not(:first-of-type) {
+  border-top: dotted 2px; }

@@ -1,20 +1,7 @@
-.ChangeLog-item {
- display: grid;
- gap: var(--size-40);
- padding: var(--size-80) 0;
-
- h2 {
-  padding: var(--size-80) 0;
- }
-
+.ChangeLog-date {
+ margin-right: var(--size-40);
 }
 
 .ChangeLog-item:not(:first-of-type) {
  border-top: 2px dotted;
-}
-
-@include breakpoint(md) {
- .ChangeLog-item {
-  grid-template-columns: 1fr 4fr;
- }
 }

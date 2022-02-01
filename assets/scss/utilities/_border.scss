@@ -1,0 +1,15 @@
+.bb {
+ border-bottom: dotted 2px;
+}
+
+.bt {
+ border-top: dotted 2px;
+}
+
+.bb\:not:not(:last-of-type) {
+ border-bottom: dotted 2px;
+}
+
+.bt\:not:not(:first-of-type) {
+ border-top: dotted 2px;
+}

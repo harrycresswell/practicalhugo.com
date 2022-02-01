@@ -1,7 +1,7 @@
 ---
 title: "Practical Hugo"
-description: Build resilient websites with [Hugo](https://gohugo.io/) and the [Jamstack](https://jamstack.org/).
-description_seo: Build resilient websites with Hugo and the Jamstack
+description: Learn to build simple, resilient websites with [Hugo](https://gohugo.io/) and the [Jamstack](https://jamstack.org/).
+description_seo: Learn to build simple, resilient websites with Hugo and the Jamstack
 date: 2021-12-20T15:40:47Z
 draft: false
 ---
