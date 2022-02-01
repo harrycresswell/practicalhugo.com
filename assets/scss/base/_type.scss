@@ -52,11 +52,14 @@ h3 {
 }
 
 p,
-li,
+li:not([class]),
 blockquote {
   max-width: var(--width-longform);
 }
 
+em,
 code {
   background-color: var(--gray-800);
+  padding: var(--size-10) var(--size-20);
+  border-radius: 4px;
 }

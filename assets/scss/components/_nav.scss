@@ -1,9 +1,12 @@
 .Nav-list {
  list-style: none;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
 }
 
 .Nav-listItem {
- margin: var(--size-60) 0;
+ padding: var(--size-30);
 }
 
 .Nav-listItemLink {
