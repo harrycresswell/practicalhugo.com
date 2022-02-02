@@ -2,3 +2,10 @@ a {
  color: var(--white);
  text-underline-offset: 2px;
 }
+
+a:hover {
+ background-color: var(--white);
+ color: var(--gray-900);
+ text-decoration: none;
+ text-decoration-skip-ink: auto;
+}
