@@ -23,8 +23,8 @@ h4 {
 
 h1 {
   font-size: var(--size-80);
-  margin-top: var(--size-120);
-  margin-bottom: var(--size-120);
+  margin-top: var(--size-130);
+  margin-bottom: var(--size-130);
   max-width: var(--width-compact);
 
   @include breakpoint(md) {
@@ -32,7 +32,7 @@ h1 {
   }
 
   @include breakpoint(lg) {
-    font-size: var(--size-100);
+    font-size: var(--size-110);
   }
 }
 
@@ -41,16 +41,16 @@ h2 {
   font-size: var(--size-70);
   max-width: var(--width-compact);
 
-  @include breakpoint(md) {
+  @include breakpoint(lg) {
     font-size: var(--size-80);
   }
 
 }
 
 h3 {
-  font-size: var(--size-60);
+  font-size: var(--size-50);
 
-  @include breakpoint(md) {
+  @include breakpoint(lg) {
     font-size: var(--size-70);
   }
 }

@@ -45,12 +45,13 @@
   --size-50: calc(var(--vr) *1.25);
   --size-60: calc(var(--vr) *1.5);
   --size-70: calc(var(--vr) *2);
-  --size-80: calc(var(--vr) *3);
-  --size-90: calc(var(--vr) *4);
-  --size-100: calc(var(--vr) *4.5);
-  --size-110: calc(var(--vr) *6);
-  --size-120: calc(var(--vr) *8);
-  --size-130: calc(var(--vr) *11); }
+  --size-80: calc(var(--vr) *2.5);
+  --size-90: calc(var(--vr) *3);
+  --size-100: calc(var(--vr) *4);
+  --size-110: calc(var(--vr) *4.5);
+  --size-120: calc(var(--vr) *6);
+  --size-130: calc(var(--vr) *8);
+  --size-140: calc(var(--vr) *11); }
 
 :root {
   --font-default: 'Space Mono', "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
@@ -167,24 +168,24 @@ h4 {
 
 h1 {
   font-size: var(--size-80);
-  margin-top: var(--size-120);
-  margin-bottom: var(--size-120);
+  margin-top: var(--size-130);
+  margin-bottom: var(--size-130);
   max-width: var(--width-compact); }
   @media (min-width: 48em) {
     h1 {
       font-size: var(--size-90); } }
   @media (min-width: 64em) {
     h1 {
-      font-size: var(--size-100); } }
+      font-size: var(--size-110); } }
 h2 {
   font-size: var(--size-70);
   max-width: var(--width-compact); }
-  @media (min-width: 48em) {
+  @media (min-width: 64em) {
     h2 {
       font-size: var(--size-80); } }
 h3 {
-  font-size: var(--size-60); }
-  @media (min-width: 48em) {
+  font-size: var(--size-50); }
+  @media (min-width: 64em) {
     h3 {
       font-size: var(--size-70); } }
 p,
