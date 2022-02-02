@@ -2,10 +2,10 @@
 <html lang="en">
   {{ partial "head.html" . }}
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     {{ partial "site-head.html" . }}
-    <main class="wrapper">    
-      {{ block "main" . }}
-      {{ end }}
+    <main id="main-content" class="wrapper">    
+      {{ block "main" . }}{{ end }}
     </main>
     {{ partial "site-foot.html" . }}
   </body>
