@@ -32,6 +32,9 @@ dd {
 /* Set core root defaults */
 html {
   scroll-behavior: smooth;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 /* Set core body defaults */
