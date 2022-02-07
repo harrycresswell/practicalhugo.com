@@ -11,9 +11,8 @@ badges:
 ### New feature
 
 - Added  a skip link to improve accessibility, so you can now jump straight to main content using keyboard tabbing, etc
-- Improved link legibility by adding a hover effect.
-
+- Improved link legibility by adding a hover effect
 ### Bug fixes & improvements
 
-- Added `text-size-adjust` to reset to prevent inflated text on mobile landscape orientation. [Props to kilian](https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/) for help with this one.
+- Added `text-size-adjust` to reset to prevent inflated text on mobile landscape orientation. [Props to Kilian](https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/) for help with this one
 - Updated changelog permalink structure to include year, month and day

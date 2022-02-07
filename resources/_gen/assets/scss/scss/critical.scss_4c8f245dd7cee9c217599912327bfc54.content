@@ -233,7 +233,7 @@ fieldset {
   padding: var(--size-70); }
 
 label {
-  font-size: var(--size-40);
+  font-size: inherit;
   font-weight: var(--font-weight-bold);
   text-transform: uppercase; }
 
@@ -244,7 +244,7 @@ input {
   color: var(--white);
   display: block;
   font-family: inherit;
-  font-size: var(--size-40);
+  font-size: inherit;
   margin-top: var(--space-20);
   padding: var(--size-30) var(--size-40);
   width: 100%; }

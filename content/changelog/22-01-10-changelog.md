@@ -8,4 +8,3 @@ badges:
 ---
 
 [Practicalhugo.com](https://practicalhugo.com) now has a changelog page. To record new features, bug fixes and improvements.
-
