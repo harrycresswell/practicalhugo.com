@@ -9,9 +9,9 @@
         <h2 id="{{ $curriculum.title | urlize }}">{{ $curriculum.title }}</h2>
         {{ range $module }}     
           <article class="mt110 pb80">
-            <div class="flex justify-between">
+            <div class="flex justify-between items-center">
               <span>Module {{ .number }}</span>
-              <span class="Badge">Lesson {{ .lesson_total }}</span>
+              <span class="Badge">{{ .lesson_total }} Lessons</span>
             </div>
             <h3 class="pt60 pb60">{{ .title }}</h3>
             <p>{{ .description }}</p> 
