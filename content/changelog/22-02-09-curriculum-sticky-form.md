@@ -20,9 +20,9 @@ Homepage now includes a course curriculum, well part of one at least. More to co
 ### Changes
 
 - Site logo in sitehead moved to left and site title hidden for all but screen readers
-- Sign up form now sticky on larger devices
+- Sign up form now sticky on larger devices and includes first name input, also removed button down link
 
 ### Bug fixes & improvements
 
 - Callout now takes an optional icon, also added missing box shadow
-- Replaced missing paragraph spacing on generic single pages, like [thanks](/thanks), etc.
+- Replaced missing paragraph spacing on generic single pages, like [thanks](/thanks), etc

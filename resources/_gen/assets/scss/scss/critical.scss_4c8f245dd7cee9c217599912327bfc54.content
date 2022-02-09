@@ -265,7 +265,7 @@ svg {
 @media (min-width: 64em) {
   .home-wrap {
     display: flex;
-    gap: var(--size-110); } }
+    gap: var(--size-130); } }
 
 .home-wrap article {
   position: relative;
