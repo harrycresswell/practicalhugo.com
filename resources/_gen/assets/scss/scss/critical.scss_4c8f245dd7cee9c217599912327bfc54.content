@@ -236,7 +236,7 @@ fieldset {
   border: 0;
   background-color: var(--gray-800);
   box-shadow: var(--elevation-04);
-  padding: var(--size-70); }
+  padding: var(--size-90) var(--size-70); }
 
 label {
   font-size: inherit;
@@ -251,7 +251,7 @@ input {
   display: block;
   font-family: inherit;
   font-size: inherit;
-  margin-top: var(--space-20);
+  margin-top: var(--size-20);
   padding: var(--size-30) var(--size-40);
   width: 100%; }
 
@@ -446,7 +446,7 @@ svg {
     grid-template-columns: 1fr 2fr; } }
 
 .mt10 {
-  margi-top: var(--size-10); }
+  margin-top: var(--size-10); }
 
 .mt20 {
   margin-top: var(--size-20); }

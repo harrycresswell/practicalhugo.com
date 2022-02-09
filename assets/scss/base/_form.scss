@@ -2,7 +2,7 @@ fieldset {
  border: 0;
  background-color: var(--gray-800);
  box-shadow: var(--elevation-04);
- padding: var(--size-70);
+ padding: var(--size-90) var(--size-70);
 }
 
 label {
@@ -19,7 +19,7 @@ input {
  display: block;
  font-family: inherit;
  font-size: inherit;
- margin-top: var(--space-20);
+ margin-top: var(--size-20);
  padding: var(--size-30) var(--size-40);
  width: 100%;
 }

@@ -6,11 +6,14 @@
   class="SignUp embeddable-buttondown-form"
 >
 <fieldset class="flow">
-  <label for="bd-email">Enter your email</label>
-  <input type="email" name="email" id="bd-email" required/>
+  <div>
+    <label for="bd-first-name">First name</label>
+    <input id="first-name" type="text" name="metadata__first-name" required>
+  </div>
+  <div>
+    <label for="bd-email">Email address</label>
+    <input type="email" name="email" id="bd-email" required/>
+  </div>
   <button class="Button" type="submit">Learn Hugo</button>
-  <p>
-    Powered by <a href="https://buttondown.email" target="_blank" rel="noopener noreferrer">Buttondown</a>.
-  </p>
 </fieldset>
 </form>
