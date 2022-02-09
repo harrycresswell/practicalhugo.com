@@ -27,7 +27,7 @@
   {{ $calloutText := .Params.callout_text }}
   {{ if eq .Params.callout true  }}
   <section class="Callout">
-    {{ $calloutText | markdownify }}
+    <p>{{ $calloutText | markdownify }}</p>
   </section>
   {{ end }}
 {{ end }}

@@ -48,3 +48,7 @@ module:
       - title: Building pages from front matter
       - title: Using data files for structed data
       - title: Working with external data sources
+callout:
+  show: true
+  text: Curriculum still in development. Sample lesson coming soon.
+  icon: warning

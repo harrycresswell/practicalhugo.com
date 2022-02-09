@@ -22,6 +22,18 @@
             </ul> 
           </article>
         {{ end }}
+        {{ $callout := $curriculum.callout }}
+        {{ $show := $callout.show }}
+        {{ $text := $callout.text }}
+        {{ $icon := $callout.icon }}
+        {{ if eq $show true }}
+          <div class="Callout">
+            {{ if eq $icon "warning" }}
+              {{ partialCached "svg/warning.html" . }}
+            {{ end }}
+            <p>{{ $text | markdownify }}</p>
+          </div>
+        {{ end }}
       </div>
     </section>
     {{ partial "signup-form.html" . }}
