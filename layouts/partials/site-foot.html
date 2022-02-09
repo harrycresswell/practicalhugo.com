@@ -2,7 +2,7 @@
   <nav class="Nav bb">
     <ul class="Nav-list">
       {{ $currentPage := . }}
-      {{ range .Site.Menus.main }}
+      {{ range .Site.Menus.footer }}
       <li class="Nav-listItem">
         <a 
           class="Nav-listItemLink {{ if eq $currentPage.RelPermalink .URL }}is-active{{end}}" 

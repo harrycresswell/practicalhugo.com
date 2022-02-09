@@ -6,7 +6,7 @@
       <div class="mt130">
         {{ $curriculum := .Site.Data.curriculum }}
         {{ $module := $curriculum.module }}
-        <h2>{{ $curriculum.title }}</h2>
+        <h2 id="{{ $curriculum.title | urlize }}">{{ $curriculum.title }}</h2>
         {{ range $module }}     
           <article class="mt110 pb80">
             <div class="flex justify-between">

@@ -1,16 +1,21 @@
 [[main]]
+  name = "Curriculum"
+  url = "#the-curriculum"
+  weight = 1
+[[footer]]
   name = "@practicalhugo"
   url = "https://twitter.com/practicalhugo/"
   weight = 1
-  [main.params]
+  [footer.params]
     external = true
-[[main]]
+[[footer]]
   name = "@harrycresswell"
   url = "https://harrycresswell.com/"
   weight = 2
-  [main.params]
+  [footer.params]
     external = true
-[[main]]
+[[footer]]
   name = "Changelog"
   url = "/changelog/"
   weight = 3
+

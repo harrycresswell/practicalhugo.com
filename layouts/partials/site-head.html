@@ -1,4 +1,16 @@
 <header role="banner" class="SiteHead">
-  <a class="SiteHead-title" href="/">{{ .Site.Title }}</a>
-  {{- partialCached "svg/logo.html" . -}}
+  <a class="SiteHead-title" href="/">
+    {{- partialCached "svg/logo.html" . -}}
+    <span class="visually-hidden">{{ .Site.Title }}</span>
+  </a>
+  <nav class="Nav" role="navigation">
+    <ul class="Nav-list">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        <li class="Nav-listItem">
+          <a class="Nav-listItemLink{{ if eq $currentPage.RelPermalink .URL }} is-active{{ end }}" href="{{.URL }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
 </header>
