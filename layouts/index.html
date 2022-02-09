@@ -1,10 +1,29 @@
 {{ define "main" }}
   {{ partial "hero.html" . }}
-  <section class="grid gg110 lg:gtc-1-1">
-    <div class="flow">
+  <div class="home-wrap">
+    <section class="flow">
       {{ .Content }}
-    </div>
+      <div class="mt130">
+        {{ $curriculum := .Site.Data.curriculum }}
+        {{ $module := $curriculum.module }}
+        <h2>{{ $curriculum.title }}</h2>
+        {{ range $module }}     
+          <article class="mt110 pb80">
+            <div class="flex justify-between">
+              <span>Module {{ .number }}</span>
+              <span class="Badge">Lesson {{ .lesson_total }}</span>
+            </div>
+            <h3 class="pt60 pb60">{{ .title }}</h3>
+            <p>{{ .description }}</p> 
+            <ul>
+            {{ range .lessons }}
+              <li><strong>{{ .title }}</strong></li>
+            {{ end }}
+            </ul> 
+          </article>
+        {{ end }}
+      </div>
+    </section>
     {{ partial "signup-form.html" . }}
-  </section>
-  
+  </div>
 {{ end }}

@@ -1,0 +1,29 @@
+@include breakpoint(lg) {
+ .home-wrap {
+  display: flex;
+  gap: var(--size-110);
+ }
+}
+
+.home-wrap {
+ article {
+  position: relative;
+  border-bottom: dotted 2px;
+
+  &:last-of-type {
+   border-bottom: none;
+  }
+  
+  &:last-of-type:before {
+   content: "";
+   position: absolute;
+   display: block;
+   width: 110%;
+   height: 90%;
+   background: linear-gradient(360deg, #111111, rgba(200, 100, 100, 0) 100%);
+   z-index: 100;
+   margin-left: -10%;
+  }
+
+ }
+}

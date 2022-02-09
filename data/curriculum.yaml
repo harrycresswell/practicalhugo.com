@@ -1,0 +1,50 @@
+---
+title: The curriculum
+module:
+  - title: Introduction
+    number: 0
+    description: Everything you need to know about the course, before we get going.
+    lesson_total: 5
+    lessons:
+      - title: What is Hugo?
+      - title: Why use the Jamstack?
+      - title: How this course works
+      - title: What you’ll need
+      - title: What you’ll be building
+      - title: Making a project folder
+  - title: Up & Running
+    number: 1
+    description: Learn the very basics of building websites with Hugo.
+    lesson_total: 8
+    lessons:
+      - title: Installing Hugo
+      - title: Using Hugo’s CLI
+      - title: Creating a new site
+      - title: Intro to the config file
+      - title: Building a homepage
+      - title: Running the web server
+      - title: Creating pages
+      - title: Generating output
+  - title: Building a starter theme
+    number: 2
+    description: Learn how to organise your layouts and speed up your development process.
+    lesson_total: 10
+    lessons:
+      - title: Creating a new theme
+      - title: Building a base template
+      - title: Working with partials
+      - title: Adding a menu
+      - title: Creating a list template
+      - title: Improving the <head>
+      - title: The static folder
+      - title: Adding a 404 page
+      - title: Styling basics
+      - title: Intro to Hugo pipes
+  - title: Working with data
+    number: 3
+    description: Learn how to construct pages from front matter data, use data files and work with external data source.
+    lesson_total: 8
+    lessons:
+      - title: Building pages from front matter
+      - title: Using data files for structed data
+      - title: Working with external data sources

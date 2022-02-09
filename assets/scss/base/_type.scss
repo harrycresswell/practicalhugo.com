@@ -38,20 +38,20 @@ h1 {
 
 
 h2 {
-  font-size: var(--size-70);
+  font-size: var(--size-80);
   max-width: var(--width-compact);
 
   @include breakpoint(lg) {
-    font-size: var(--size-80);
+    font-size: var(--size-100);
   }
 
 }
 
 h3 {
-  font-size: var(--size-50);
+  font-size: var(--size-70);
 
   @include breakpoint(lg) {
-    font-size: var(--size-70);
+    font-size: var(--size-80);
   }
 }
 

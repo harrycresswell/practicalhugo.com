@@ -52,6 +52,9 @@
 @import 'base/form';
 @import 'base/list';
 
+// Layout styles
+@import 'layout/home-wrap';
+
 // Components
 @import 'components/skip-link';
 @import 'components/site-head';
@@ -60,6 +63,7 @@
 @import 'components/site-foot';
 @import 'components/callout';
 @import 'components/badge';
+@import 'components/sign-up';
 
 // Utilities
 @import 'utilities/visually-hidden';
