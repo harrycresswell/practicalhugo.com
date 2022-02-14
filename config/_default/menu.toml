@@ -1,6 +1,6 @@
 [[main]]
   name = "Curriculum"
-  url = "/#the-curriculum"
+  url = "/#curriculum"
   weight = 1
 [[footer]]
   name = "@practicalhugo"
