@@ -361,7 +361,7 @@ svg {
     margin-top: 0; }
 
 .Callout {
-  border: dotted 2px var(--white);
+  border: dotted 2px var(--gray-200);
   display: flex;
   gap: var(--size-40);
   margin-top: var(--size-30);
