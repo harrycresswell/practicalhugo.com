@@ -361,13 +361,12 @@ svg {
     margin-top: 0; }
 
 .Callout {
-  background-color: var(--gray-800);
+  border: dotted 2px var(--white);
   display: flex;
   gap: var(--size-40);
-  margin-top: var(--size-100);
-  margin-bottom: var(--size-110);
-  padding: var(--size-60) var(--size-70);
-  box-shadow: 0px 12px 20px 8px rgba(0, 0, 0, 0.37); }
+  margin-top: var(--size-30);
+  margin-bottom: var(--size-130);
+  padding: var(--size-40); }
   .Callout p {
     line-height: var(--line-height-loose); }
 
