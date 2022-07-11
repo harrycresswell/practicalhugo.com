@@ -12,4 +12,4 @@ If you’d rather **keep it simple** and learn how to build resilient, lightweig
 
 During the course you will learn how to **use Hugo and the Jamstack to build websites** that are fun to make, easy to maintain and cost effective to run.
 
-Launching **Spring 2022**. Get early access now.
+Launching soon. Get early access now.
