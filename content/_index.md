@@ -8,8 +8,8 @@ draft: false
 
 **Building websites doesn’t have to be complicated**, but lately it’s started to feel that way.
 
-If you’d rather **keep it simple** and learn how to build resilient, lightweight websites, then this course is for you.
+If you prefer to **keep it simple**. And, you’d like to learn how to build resilient, lightweight websites. Then this course is for you.
 
 During the course you will learn how to **use Hugo and the Jamstack to build websites** that are fun to make, easy to maintain and cost effective to run.
 
-Launching soon. Get early access now.
+Launching soon. Sign up for early access.
